@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class largestelement {
+	public static int largestElement(int []arr) {
+		int max =Integer.MIN_VALUE;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]>max) {
+				max =arr[i];
+			}
+		}
+		return max;
+	}
+	public static void print(int []arr) {
+		for(int i=0;i<arr.length;i++) {
+			System.out.print(arr[i]+" ");
+			
+		}
+	}
+	public static int[] takeInput() {
+		Scanner s=new Scanner (System.in);
+		System.out.println(" enter the size of the array:");
+		int n=s.nextInt();
+		int []arr =new int[n];
+		for(int i=0;i<n;i++) {
+			System.out.println(" enter the element at "+i +" th index :");
+			arr[i]=s.nextInt();
+		}
+		return arr;
+	}
+
+	public static void main(String[] args) {
+		int arrMain[] =takeInput();
+		print(arrMain);
+		System.out.println(" largest element of array is : "+largestElement(arrMain));
+	}
+
+}
